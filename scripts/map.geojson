@@ -4,20 +4,20 @@ var geoJson = [{
     {
       "type": "Feature",
       "properties": {
-        "title": "Kirkland Hall",
+        "title": "Brandenburg Gate",
 		"marker-size": "medium",
-	"marker-color": "#e5c278",
+	"marker-color": "#3366FF",
 	"marker-symbol": "star-stroked",
-	"images":[[ "images/pa.bld.comp.1h.jpg", "The cornerstone for Old Main, now Kirkland Hall, was laid on April 28, 1874."],[ "images/pa.bld.kirh.003.jpg", "Classes would begin in this building the following fall with a little over 200 students."],["images/pa.ww1.35.jpg", "Old Main was the primary hub of the University in the early years, as seen in this photo of WWII soldiers."],["images/pa.bld.kirh.002.jpg", "Old Main has been known as Main Building, University Hall, College Hall, and, finally, Kirkland Hall."],["images/pa.bld.kirh.028.jpg", " On April 20, 1905, disaster would strike the University as a fire would destroy much of the building."],["images/pa.bld.kirh.100.jpg", "The fire would consume all but 4,000 volumes of the nearly 40,000 volumes in the library."],["images/pa.bld.kirh.049.jpg", "The building was remade in the image of the town hall of Siena, with the addition of the battlements on the roof and the singular bell tower."],["images/pa.caf.aeri.156.jpg", "Kirkland Hall has become the architectural symbol of the University."],["images/pa.bld.kirh.092.jpg", "Kirkland Hall was designed by a local Nashville architect, William C. Smith. The iconic building now serves as the administrative building."]]
-      },
+	"images":[[ "images/Brandenburger_Tor_abends.jpg", "The Brandenburg Gate."],[ "images/Brandenburger2.jpg", "The Brandengurb Gate quadriga at night."]]},
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "13.410933",
-          "52.520500"
+          "13.377674",
+          "52.516224"
         ]
       }
-    },
+      }
+    ,
     {
       "type": "Feature",
       "properties": {
@@ -34,6 +34,6 @@ var geoJson = [{
           "52.5881"
         ]
       }
-    }
+    },
   ]
-}];
+  }];
