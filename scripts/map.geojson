@@ -13,8 +13,8 @@ var geoJson = [{
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "-86.802567",
-          "36.148322"
+          "13.410933",
+          "52.520500"
         ]
       }
     },
@@ -30,26 +30,8 @@ var geoJson = [{
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "-86.80195",
-          "36.149128"
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Commodore's Statue",
-
-        "marker-size": "medium",
-	"marker-color": "#e5c278",
-	"marker-symbol": "star-stroked",
-	"images":[["images/pa.caf.stac.017.jpg", "The Commodore's statue was created by the Italian-born sculptor Giuseppe Moretti in his New York studio."],["images/pa.caf.stac.017.jpg", "The sculpture was commissioned by Nashville citizens and officers of the Tennessee Centennial Exposition. "],["images/pa.caf.stac.027.jpg", "The statue was originally placed at the western end of the Parthenon during the 1897 Tennessee Centennial Exposition."],["images/pa.caf.stac.017.jpg", "Upon the closing of the exposition the statue was moved across the street to Vanderbilt's campus."],["images/pa.caf.stac.027.jpg", "The statue was initially positioned in front of the Kirkland Hall Tower, but it was eventually moved to its current location in 1949."]]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          "-86.802897",
-          "36.14915"
+          "13.363061",
+          "52.5881"
         ]
       }
     }

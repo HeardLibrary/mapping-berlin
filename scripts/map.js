@@ -1,10 +1,12 @@
 // code adapted from https://www.mapbox.com/mapbox.js/example/v1.0.0/markers-with-image-slideshow/
 
-var map = L.mapbox.map('map', 'vulibrarygis.hj4f8a4e', {
-            minZoom: 12,
-            maxZoom: 19,
-            maxBounds: [[36.12,-86.75], [36.17,-86.85]]});
-			
+var map = L.mapbox.map('map', 'eus09901.km73d5o2') 
+            // Construct a bounding box for this map that the user cannot
+			// move out of
+			var southWest = L.latLng(52.4934, 13.45867),
+			northEast = L.latLng(52.545311, 13.328738),
+			bounds = L.latLngBounds(southWest, northEast);
+
 
 
 // Add custom popup html to each marker
@@ -70,4 +72,4 @@ $('#map').on('click', '.popup .cycle a', function() {
     return false;
 });
 
-map.setView([36.145733, -86.800675], 16);
+map.setView([52.519593, 13.405671], 12);
