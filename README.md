@@ -1,11 +1,11 @@
-Campus Tour
+Berlin in the 20th Century: A MapBox Project
 ===========
 
-The goal of this project is to create a light-weight, mobile ready map of campus points-of-interest using open source technologies. 
+The goal of this project is to create a lightweight, mobile-ready map of historical points in twentieth century Berlin. 
 
 ###Technologies
 
-The project uses:
+The project uses the following open source technologies:
 
 - [GeoJSON](http://geojson.org/) to encode GIS data points;
 - [Leaflet.js](http://leafletjs.com/) for the interactive GIS layer;
