@@ -25,13 +25,13 @@ var geoJson = [{
         "marker-size": "medium",
 	"marker-color": "#e5c278",
 	"marker-symbol": "star-stroked",
-	"images":[["images/pa.bld.kish.019.jpg", "The original Kissam Hall was built in 1901 as a men's dormitory.  It was torn down and replaced with a newer version of Kissam Hall in 1958."],["images/pa.com.1973.466.jpg", " Outdated and in need of renovation, the building was razed in 1958 to make way for Kissam Quadrangle. "],["images/pa.bld.kisq.007.jpg", "Kissam Quadrangle consisted of six dorms that housed 100 men each."],["images/pa.bld.kish.031.jpg", " Kissam Quadrangle found a similar fate to its predecessor when it was razed to make room for the Colleges at Kissam."],["images/render.jpg", "The site is currently composed of Warren and Moore Colleges which are part of Residence Education's college hall system. "]]
+	"images":[["images/1280px-Königsplatz_Berlin,_um_1880.jpg", "The Königsplatz with the Raczyński Palace in 1880."],["images/Reichstag_building_Berlin_view_from_west_before_sunset.jpg", "The Reichstag building."]]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "13.363061",
-          "52.5881"
+          "13.376199",
+          "52.517539"
         ]
       }
     },
