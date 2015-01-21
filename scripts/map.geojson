@@ -21,7 +21,7 @@ var geoJson = [{
     {
       "type": "Feature",
       "properties": {
-        "title": "Colleges at Kissam",
+        "title": "Koeningsplatz",
         "marker-size": "medium",
 	"marker-color": "#e5c278",
 	"marker-symbol": "star-stroked",
