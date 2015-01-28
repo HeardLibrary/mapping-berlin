@@ -11,5 +11,23 @@
 10. Click "File" and "Browse".  Browse for the location where you have saved your historic map and click "Done".
 11. Change the SRS dropdown to WGS 1984.  This is how we set the projection of the datasource, or in this case, our historic map.  
 12. Click "Save & Stlye".  This step is critical.  If you do not set the strly then your map will not display.
-13. In the right sidebar delete everything under autopilor.mss EXCEPT for the information pertaining to your map.  (For example-- do not delete where it says #1936 {raster-opacity:1;} 
-14. 
+13. In the right sidebar delete everything under autopilor.mss EXCEPT for the information pertaining to your map.  (For example-- do not delete where it says #1936 {raster-opacity:1;})
+14. Click "Export">"Upload".
+15. Pan to your historic map and zoom in.  This part might take some time.  It can be difficult to find your map.  
+16. Once you have located your map, hold down shift + drag the bounds to fit your map.
+17. Click the center of your map to set the zoom level (once you have zoomed to a desired level.
+18. Name your map.
+19. Change the zoom slider on the right sidebar to match 13-18.
+20. Set your "MetaTile size" to 1.
+21. Click "Upload".
+22. Once the upload is complete, go to your mapbox account.
+23. Click "Data".
+24. Click "Create Project".
+25. Once in your project, select a basemap.
+26. Click in the map frame and zoom to your historic map.
+27. Click "Project" in the top menu bar.
+28. Copy your MapID.
+29. Open Atom and the map.js file from your github folder.
+30. Paste the MapID into the appropriate area (currently there is a place holder that says vulibrarygis.##### - this is where your MapID goes).
+31. Click Save.
+32. Open idex.html and you should see your historic map!
