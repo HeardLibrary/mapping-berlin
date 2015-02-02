@@ -6,7 +6,7 @@
 5.  Click Projects and create a new project.
 6.  Give your project a name and accept the default settings.
 7.  Click your new project to open it.
-8.  Once in your new project, you will go to the right hand side of the window and disable autopilot.  Normally autopilot would be good to use for beginners, but in this case we need to disable it so that we can create our custom map settings.
+8.  Once in your new project, you will go to the right hand side of the window and disable autopilot.  Normally autopilot would be good to use for beginners, but in this case we need to disable it so that we can create our custom map settings. IF YOU DO NOT SEE THE DISABLE BUTTON. THEN THERE IS NOTHING YOU NEED TO DO.
 9.  Go to the bottom left of the map and select the layer symbol.  Click "Add layer".
 10. Click "File" and "Browse".  Browse for the location where you have saved your historic map and click "Done".
 11. Change the SRS dropdown to WGS 1984.  This is how we set the projection of the datasource, or in this case, our historic map.  
