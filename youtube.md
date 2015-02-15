@@ -160,9 +160,9 @@
           }
           }]
           }];
+```
 
 * After saving everything, you should be finished! To check your work, double-click on "index.html" and your new point should now appear on your map.
-
 
 
 ![Imgur](http://i.imgur.com/gLuv6hd.jpg)
