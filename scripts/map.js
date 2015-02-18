@@ -2,7 +2,7 @@
 
 // Construct a bounding box for this map that the user cannot
 // move out of
-var southWest = L.latLng(52.500, 13.450),
+var southWest = L.latLng(53.500, 13.450),
 	northEast = L.latLng(52.545, 13.328),
 	bounds = L.latLngBounds(southWest, northEast);
 
