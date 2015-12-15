@@ -1,15 +1,15 @@
 // code adapted from https://www.mapbox.com/mapbox.js/example/v1.0.0/markers-with-image-slideshow/
 
 L.mapbox.accessToken =
-	'PUT YOUR PUBLIC TOKEN HERE';
+	'pk.eyJ1IjoidnVsaWJyYXJ5Z2lzIiwiYSI6ImFaN2JkSlUifQ.Dl2sTO1mGKK7MCd1ViGPnQ';
 
 // If you do not have a Mapbox key, refer to the readme.md
-var map = L.mapbox.map('map', 'PUT YOUR MAP ID HERE', {
-	minZoom: 12,
-	maxZoom: 19,
+var map = L.mapbox.map('map', 'vulibrarygis.l74iic1a', {
+	minZoom: 1,
+	maxZoom: 16,
 	maxBounds: [
-		[36.12, -86.75],
-		[36.17, -86.85]
+		[52.500, 13.450],
+		[52.545, 13.328]
 	]
 });
 
@@ -75,7 +75,7 @@ $('#map').on('click', '.popup .cycle a', function() {
 	return false;
 });
 
-map.setView([36.145733, -86.800675], 19);
+map.setView([52.545, 13.328], 13);
 
 // Get the points from Cloudant using JSONP
 // http://stackoverflow.com/questions/14220321/how-to-return-the-response-from-an-ajax-call
