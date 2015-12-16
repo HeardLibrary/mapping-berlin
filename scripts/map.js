@@ -1,9 +1,9 @@
 // code adapted from https://www.mapbox.com/mapbox.js/example/v1.0.0/markers-with-image-slideshow/
 
-var map = L.mapbox.map('map', 'vulibrarygis.hj4f8a4e', {
+var map = L.mapbox.map('map', 'vulibrarygis.l74iic1a', {
             minZoom: 12,
             maxZoom: 19,
-            maxBounds: [[36.12,-86.75], [36.17,-86.85]]});
+            maxBounds: [52.500, 13.450],[52.545, 13.328]});
 
 // Add custom popup html to each marker
 map.markerLayer.on('layeradd', function(e) {
@@ -65,7 +65,7 @@ $('#map').on('click', '.popup .cycle a', function() {
     return false;
 });
 
-map.setView([36.145733, -86.800675], 19);
+map.setView([52.545, 13.328], 19);
 
 // Get the points from Cloudant using JSONP
 // http://stackoverflow.com/questions/14220321/how-to-return-the-response-from-an-ajax-call
@@ -73,7 +73,7 @@ $(function() {
 
     // list views from Cloudant that we want to offer as layers
     var cloudantViews = [];
-    $.getJSON('https://vulibrarygis.cloudant.com/campustour/_design/tour', function(result) {
+    $.getJSON('https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour', function(result) {
         var viewsList = result.views;
         for (var v in viewsList) {
             cloudantViews.push(v);
@@ -97,7 +97,7 @@ $(function() {
 });
 
 function getLayer(callback, cloudantView) {
-    var cloudantURLbase = "https://vulibrarygis.cloudant.com/campustour/_design/tour/_view/";
+    var cloudantURLbase = "https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour/_view";
     var cloudantURLcallback = "?callback=?";
     var thisCloudantURL = cloudantURLbase + cloudantView + cloudantURLcallback;
     $.getJSON(thisCloudantURL, function(result) {
