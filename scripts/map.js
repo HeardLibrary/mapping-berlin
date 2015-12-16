@@ -1,11 +1,17 @@
 // code adapted from https://www.mapbox.com/mapbox.js/example/v1.0.0/markers-with-image-slideshow/
+
 L.mapbox.accessToken =
 	'pk.eyJ1IjoidnVsaWJyYXJ5Z2lzIiwiYSI6ImFaN2JkSlUifQ.Dl2sTO1mGKK7MCd1ViGPnQ';
-	
+
+// If you do not have a Mapbox key, refer to the readme.md
 var map = L.mapbox.map('map', 'vulibrarygis.l74iic1a', {
-            minZoom: 13,
-            maxZoom: 16,
-            maxBounds: [52.500, 13.450],[52.545, 13.328]});
+	minZoom: 13,
+	maxZoom: 16,
+	maxBounds: [
+		[52.500, 13.450],
+		[52.545, 13.328]
+	]
+});
 
 // Add custom popup html to each marker
 map.markerLayer.on('layeradd', function(e) {
