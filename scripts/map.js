@@ -84,7 +84,7 @@ $(function() {
 	// list views from Cloudant that we want to offer as layers
 	// Use the REST URL from Cloudant, e.g. https://vulibrarygis.cloudant.com/campustour/_design/tour
 	var cloudantViews = [];
-	$.getJSON('ttps://vulibrarygis.cloudant.com/mapping-berlin/_design/tour',
+	$.getJSON('https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour',
 		function(result) {
 			var viewsList = result.views;
 			for (var v in viewsList) {
@@ -116,7 +116,7 @@ function getLayer(callback, cloudantView) {
 	// https://vulibrarygis.cloudant.com/campustour/_design/tour/_view/
 
 	var cloudantURLbase =
-		"ttps://vulibrarygis.cloudant.com/mapping-berlin/_design/tour/_view";
+		"https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour/_view";
 	var cloudantURLcallback = "?callback=?";
 	var thisCloudantURL = cloudantURLbase + cloudantView + cloudantURLcallback;
 	$.getJSON(thisCloudantURL, function(result) {
