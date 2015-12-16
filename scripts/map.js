@@ -122,4 +122,3 @@ function processLayer(result) {
     // Add features to the map
     map.featureLayer.setGeoJSON(result);
 }
-
