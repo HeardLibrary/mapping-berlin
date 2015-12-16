@@ -8,8 +8,8 @@ var map = L.mapbox.map('map', 'vulibrarygis.l74iic1a', {
 	minZoom: 13,
 	maxZoom: 19,
 	maxBounds: [
-		[52.500, 13.450],
-		[52.545, 13.328]
+		[52.400, 13.550],
+		[52.645, 13.318]
 	]
 });
 
