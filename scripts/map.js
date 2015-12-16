@@ -6,7 +6,7 @@ L.mapbox.accessToken =
 // If you do not have a Mapbox key, refer to the readme.md
 var map = L.mapbox.map('map', 'vulibrarygis.l74iic1a', {
 	minZoom: 13,
-	maxZoom: 16,
+	maxZoom: 19,
 	maxBounds: [
 		[52.500, 13.450],
 		[52.545, 13.328]
