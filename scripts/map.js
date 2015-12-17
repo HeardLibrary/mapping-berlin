@@ -8,8 +8,8 @@ var map = L.mapbox.map('map', 'vulibrarygis.l74iic1a', {
 	minZoom: 13,
 	maxZoom: 19,
 	maxBounds: [
-		[52.645, 13.20],
-		[52.400, 13.550]
+		[52.645, 13.08],
+		[52.35, 13.68]
 	]
 });
 
@@ -73,7 +73,7 @@ $('#map').on('click', '.popup .cycle a', function() {
     return false;
 });
 
-map.setView([52.545, 13.328], 13);
+map.setView([52.51, 13.38], 13);
 
 // Get the points from Cloudant using JSONP
 // http://stackoverflow.com/questions/14220321/how-to-return-the-response-from-an-ajax-call
