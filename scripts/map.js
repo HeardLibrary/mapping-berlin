@@ -5,7 +5,7 @@ L.mapbox.accessToken =
 
 // If you do not have a Mapbox key, refer to the readme.md
 var map = L.mapbox.map('map', 'vulibrarygis.l74iic1a', {
-	minZoom: 13,
+	minZoom: 12,
 	maxZoom: 19,
 	maxBounds: [
 		[52.645, 13.08],
@@ -73,7 +73,7 @@ $('#map').on('click', '.popup .cycle a', function() {
     return false;
 });
 
-map.setView([52.51, 13.38], 13);
+map.setView([52.51, 13.38], 19);
 
 // Get the points from Cloudant using JSONP
 // http://stackoverflow.com/questions/14220321/how-to-return-the-response-from-an-ajax-call
