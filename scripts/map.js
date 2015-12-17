@@ -73,7 +73,7 @@ $('#map').on('click', '.popup .cycle a', function() {
     return false;
 });
 
-map.setView([52.51, 13.38], 19);
+map.setView([52.51, 13.38], 10);
 
 // Get the points from Cloudant using JSONP
 // http://stackoverflow.com/questions/14220321/how-to-return-the-response-from-an-ajax-call
