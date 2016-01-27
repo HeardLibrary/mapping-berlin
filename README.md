@@ -1,6 +1,6 @@
-#Campus Tour
+Mapping Berling
 
-The goal of this project is to create a light-weight, mobile ready map of campus points-of-interest using open source technologies. 
+The goal of this project is to create a light-weight, mobile ready map of points-of-interest in Berlin using open source technologies. 
 
 ##Technologies
 
