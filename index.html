@@ -2,20 +2,19 @@
 <html>
 <head>
   <meta charset=utf-8 />
-  <title>Historical Map</title>
+  <title>Mapping Berlin</title>
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <link href="http://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.24.0/L.Control.Locate.css" rel='stylesheet' />
-  <link href="https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css" rel="stylesheet"/>
-  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src='//api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <link href="//api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css" rel="stylesheet"/>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/map.css" rel='stylesheet'/>
 </head>
 <body>
-<div class="navbar navbar-default navbar-static-top">
-        <div class="navbar-header">
-          <a href="./index.html" class="navbar-brand">Berlin in the 20th Century: A MapBox Project</a>
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="navbar-header">
+      <a href="./index.html" class="navbar-brand">Berlin in the 20th Century: A MapBox Project</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -25,24 +24,22 @@
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav">
             <li>
-              <a href="http://www.library.vanderbilt.edu/about/historicatour.php">About</a>
+              <a href="./about.html">About</a>
             </li>
             <li>
-              <a href="/">Vanderbilt Library</a>
+              <a href="http://as.vanderbilt.edu/europeanstudies/">Max Kade Center</a>
             </li>
-          </ul>
-        </div>
-      </div>
-    <div id="alert-vucampus" class="alert alert-warning">
-      <span class="glyphicon glyphicon-exclamation-sign"></span>
-      <strong>Warning:</strong> We could not accurately locate you on the Vanderbilt campus.</div>
-	  <div id="alert-browser" class="alert alert-warning">
-      <span class="glyphicon glyphicon-exclamation-sign"></span>
-      <strong>Warning:</strong> Geolocation services are disabled on your browser.</div>
-    <div id="map">
-	</div>
-  <script src="scripts/map.geojson"></script>
+      </ul>
+    </div>
+  </div>
+
+  <div id="layer-options">
+    <select id="layers-dropdown">
+      <option value="default">Select a Map:</option>
+    </select>
+  </div>
+
+  <div id="map"></div>
   <script src="scripts/map.js"></script>
-  <script src="scripts/locate.js"></script>
   </body>
 </html>

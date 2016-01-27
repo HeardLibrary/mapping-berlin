@@ -63,3 +63,11 @@
   display:none;
   margin-bottom:0px;
 }
+
+#layer-options {
+  float: right;
+  position: relative;
+  right: 25px;
+  top: 10px;
+  z-index: 1;
+}
