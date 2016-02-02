@@ -6,22 +6,22 @@ Your GeoJSON should look similar to the code shown below.
 
 ```json
 {
-"type": "Feature",
-"properties": {
-  "title": "Berlin Chancellary",
-  "series": "Spring 2016",
-  "tour": "Test",
-  "marker-size": "medium",
-  "marker-color": "#FFFF00",
-  "marker-symbol": "rail-metro",
+  "type": "Feature",
+  "properties": {
+    "title": "Berlin Chancellary",
+    "series": "Spring 2016",
+    "tour": "Test",
+    "marker-size": "medium",
+    "marker-color": "#FFFF00",
+    "marker-symbol": "rail-metro"
+  },
   "geometry": {
-  "type": "Point",
-  "coordinates": [
-    "13.369052",
-    "52.520207"
-  ]
-}
-}
+    "type": "Point",
+    "coordinates": [
+      13.369052,
+      52.520207
+    ]
+  }
 }
 ```
 The next step is to take these points and get them to our map.
