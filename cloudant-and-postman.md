@@ -32,6 +32,12 @@ First, make sure you are using the Chrome web browser by Google.  If you are not
 
 Next, add [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en).
 
-![Imgur](http://i.imgur.com/ci2WODU.png).
+![Imgur](http://i.imgur.com/ci2WODU.png)
+
+Once you have added Postman to Chrome, go ahead and launch the program.  Change the drop-down to Post (as shown in the image below) and type out this URL: vulibrarygis.cloudant.com/mapping-berlin/_bulk_docs
+
+Click the "Authoirzation" tab and change the drop-down from "No-auth" to "Basic Auth".  Type in the login information found [here](https://gist.github.com/CliffordAnderson/b816459034a0590d5d68/revisions)
+
+![Imgur](http://i.imgur.com/iuwBXya.png)
 
 
