@@ -28,6 +28,8 @@ The next step is to take these points and get them to our map.
 
 In order to make sure that our points make it to the map, we will need to connect to the database that we are using to store the points and upload them one by one.  We are using a cloud database called [Cloudant](https://cloudant.com/).  Cloudant is a hosted version of [CouchDB](http://couchdb.apache.org/), which is a database that used to store your data with JSON and makes them accessible to querying through a web browser.  CouchDB works well with Javascript and web apps, which is why we have chosen it for this project.
 
+To make sure our points are posted to the map, we are going to use Postman to send HTTP requests to Cloudant.  In other words, Postman man will take our GeoJSON points and post them to the Cloudant database for us.
+
 First, make sure you are using the Chrome web browser by Google.  If you are not, you can download it [here](https://www.google.com/chrome/browser/desktop/) and go ahead and install it.
 
 Next, add [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en).
@@ -39,5 +41,12 @@ Once you have added Postman to Chrome, go ahead and launch the program.  Change 
 Click the "Authoirzation" tab and change the drop-down from "No-auth" to "Basic Auth".  Type in the login information found [here](https://gist.github.com/CliffordAnderson/b816459034a0590d5d68/revisions)
 
 ![Imgur](http://i.imgur.com/iuwBXya.png)
+
+Next, click the "Body" Tab and select the radio button that says "raw".  And change the drop down to JSON.  Next Paste your GeeJson code into the box.  Then add ```{"docs": [ ``` to the beginning of you JSON and ```]}``` to the end.  Your window and code should look like mine below.  IF you have an error, it will show a red "X" next to the line.  Click SEND.  You will get confirmation of your Post in the window below.
+
+![Imgur](http://i.imgur.com/hL1mzMG.jpg)
+
+
+
 
 
