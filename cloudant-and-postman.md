@@ -42,7 +42,33 @@ Click the "Authoirzation" tab and change the drop-down from "No-auth" to "Basic 
 
 ![Imgur](http://i.imgur.com/0ece0Ha.jpg)
 
-Next, click the "Body" Tab and select the radio button that says "raw".  And change the drop down to JSON.  Next Paste your GeeJson code into the box.  Then add ```{"docs": [ ``` to the beginning of you JSON and ```]}``` to the end.  Your window and code should look like mine below.  IF you have an error, it will show a red "X" next to the line.  Click SEND.  You will get confirmation of your Post in the window below.
+Next, click the "Body" Tab and select the radio button that says "raw".  And change the drop down to JSON.  Next Paste your GeoJSON code into the box.  Then add ```{"docs": [ ``` to the beginning of you JSON and ```]}``` to the end.  The final version of your code should look something similar to this: 
+```
+{
+  "docs": [
+{
+  "type": "Feature",
+  "properties": {
+    "title": "Berlin Chancellary",
+    "series": "Spring 2016",
+    "tour": "Test",
+    "marker-size": "medium",
+    "marker-color": "#FFFF00",
+    "marker-symbol": "rail-metro"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      13.369052,
+      52.520207
+    ]
+  }
+}
+]
+}
+```
+
+Your window and code should look like mine below.  If you have an error, it will show a red "X" next to the line.  Click SEND.  You will get confirmation of your Post in the window below.
 
 ![Imgur](http://i.imgur.com/hL1mzMG.jpg)
 
