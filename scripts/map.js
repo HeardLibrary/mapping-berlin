@@ -17,14 +17,18 @@ map.markerLayer.on('layeradd', function(e) {
 	var images = feature.properties.images;
 	var slideshowContent = '';
 
-	for (var i = 0; i < images.length; i++) {
-		var img = images[i];
+	if (images.length >= 1) {
+		for (var i = 0; i < images.length; i++) {
+			var img = images[i];
 
-		slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') + '">' +
-			img[0] +
-			'<div class="caption">' + img[1] + '</div>' +
-			'</div>';
+			slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') +
+				'">' +
+				img[0] +
+				'<div class="caption">' + img[1] + '</div>' +
+				'</div>';
+		}
 	}
+
 
 	// Create custom popup content
 	var popupContent = '<div id="' + feature.properties.id + '" class="popup">' +
