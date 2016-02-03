@@ -17,7 +17,7 @@ map.markerLayer.on('layeradd', function(e) {
 	var images = feature.properties.images;
 	var slideshowContent = '';
 
-	if (typeof images.length !== "undefined") {
+	if (typeof images !== "undefined") {
 		for (var i = 0; i < images.length; i++) {
 			var img = images[i];
 
