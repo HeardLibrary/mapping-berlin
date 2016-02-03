@@ -46,25 +46,25 @@ Next, click the "Body" Tab and select the radio button that says "raw".  And cha
 ```
 {
   "docs": [
-{
-  "type": "Feature",
-  "properties": {
-    "title": "Berlin Chancellary",
-    "series": "Spring 2016",
-    "tour": "Test",
-    "marker-size": "medium",
-    "marker-color": "#FFFF00",
-    "marker-symbol": "rail-metro"
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      13.369052,
-      52.520207
-    ]
-  }
-}
-]
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Berlin Chancellary",
+        "series": "Spring 2016",
+        "tour": "Test",
+        "marker-size": "medium",
+        "marker-color": "#FFFF00",
+        "marker-symbol": "rail-metro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.369052,
+          52.520207
+        ]
+      }
+    }
+  ]
 }
 ```
 Once you have correctly entered your code (if you have an error, it will show a red "X" next to the line),  Click SEND.  You will get confirmation of your Post in the window below.
