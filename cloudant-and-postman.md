@@ -40,7 +40,7 @@ Once you have added Postman to Chrome, go ahead and launch the program.  Change 
 
 Click the "Authoirzation" tab and change the drop-down from "No-auth" to "Basic Auth".  Type in the login information found [here](https://gist.github.com/CliffordAnderson/b816459034a0590d5d68/revisions)
 
-![Imgur](http://i.imgur.com/iuwBXya.png)
+![Imgur](http://i.imgur.com/0ece0Ha.jpg)
 
 Next, click the "Body" Tab and select the radio button that says "raw".  And change the drop down to JSON.  Next Paste your GeeJson code into the box.  Then add ```{"docs": [ ``` to the beginning of you JSON and ```]}``` to the end.  Your window and code should look like mine below.  IF you have an error, it will show a red "X" next to the line.  Click SEND.  You will get confirmation of your Post in the window below.
 
