@@ -13,7 +13,7 @@ Your GeoJSON should look similar to the code shown below.
     "tour": "Test",
     "marker-size": "medium",
     "marker-color": "#FFFF00",
-    "marker-symbol": "rail-metro"
+    "marker-symbol": "theatre"
   },
   "geometry": {
     "type": "Point",
@@ -54,7 +54,7 @@ Next, click the "Body" Tab and select the radio button that says "raw".  And cha
         "tour": "Test",
         "marker-size": "medium",
         "marker-color": "#FFFF00",
-        "marker-symbol": "rail-metro"
+        "marker-symbol": "theatre"
       },
       "geometry": {
         "type": "Point",
