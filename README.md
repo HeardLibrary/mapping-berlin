@@ -1,4 +1,4 @@
-Mapping Berling
+#Mapping Berling
 
 The goal of this project is to create a light-weight, mobile ready map of points-of-interest in Berlin using open source technologies. 
 
@@ -62,8 +62,8 @@ Set up an account at [Mapbox](https://www.mapbox.com) and then create a [new pro
   "geometry": {
     "type": "Point",
     "coordinates": [
-      "-86.797808",
-      "36.142611"
+      -86.797808,
+      36.142611
     ]
   }
 }
