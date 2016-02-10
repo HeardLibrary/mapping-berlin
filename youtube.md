@@ -2,13 +2,11 @@
 
 * Find a video of Berlin in [youTube](https://www.youtube.com/) or any other source with a [Creative Commons](http://creativecommons.org/) license. For example, [St. Nicholas' Church, Berlin, Germany](https://www.youtube.com/watch?v=uKlPfgi8xHw) by Igor Skoglund.
 
-* Click Share.  CLick Embed.  Copy the embedded url: ```<iframe width="420" height="315" src="https://www.youtube.com/embed/uKlPfgi8xHw" frameborder="0" allowfullscreen></iframe>```
+* Click Share.  Click Embed.  Copy the embedded url: ```<iframe width="420" height="315" src="https://www.youtube.com/embed/uKlPfgi8xHw" frameborder="0" allowfullscreen></iframe>```
 
 * Edit the link width to 180 and delete the height variable.  You will also want to delete the 's' from 'https:' and add a double quote around your code.  Make sure all of your code matches the following format with slashes as well.  For example : ```"<iframe width='180' src='http://www.youtube.com/embed/uKlPfgi8xHw' frameborder='0' allowfullscreen></iframe>"```
 
 * Find the Latitude and Longitude of the video you want to use with [Google Maps](https://www.google.com/maps/place/St+Nicholas'+Church,+10178+Berlin,+Germany/@52.5168424,13.4074785,17z/data=!3m1!4b1!4m2!3m1!1s0x47a84e20c2c2a4a7:0x73bc4247163b5be8).  Make sure you are using decimal degrees.
-
-* Open ```map.geojson``` in the \scripts folder of your local copy of EUS0991.01 in the [Atom](https://atom.io/) editor.
 
 * Copy a "feature" from the existing GeoJson. For example,
     ```json
