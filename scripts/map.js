@@ -4,27 +4,29 @@ L.mapbox.accessToken =
 	'pk.eyJ1IjoidnVsaWJyYXJ5Z2lzIiwiYSI6ImFaN2JkSlUifQ.Dl2sTO1mGKK7MCd1ViGPnQ';
 
 // If you do not have a Mapbox key, refer to the readme.md
-var map = L.mapbox.map('map').setView([52.51, 13.38], 12);
-
-var layer_id = "vulibrarygis.of23e6p0";
-var layer = L.mapbox.tileLayer(layer_id);
-layer.addTo(map);
+var map = L.mapbox.map('map', "vulibrarygis.of23e6p0").setView([52.51, 13.38],
+	12);
+var layer = L.mapbox.featureLayer().addTo(map)
 
 // Add custom popup html to each marker
-map.markerLayer.on('layeradd', function(e) {
+layer.on('layeradd', function(e) {
 	var marker = e.layer;
 	var feature = marker.feature;
 	var images = feature.properties.images;
 	var slideshowContent = '';
 
-	for (var i = 0; i < images.length; i++) {
-		var img = images[i];
+	if (typeof images !== "undefined") {
+		for (var i = 0; i < images.length; i++) {
+			var img = images[i];
 
-		slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') + '">' +
-			img[0] +
-			'<div class="caption">' + img[1] + '</div>' +
-			'</div>';
+			slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') +
+				'">' +
+				img[0] +
+				'<div class="caption">' + img[1] + '</div>' +
+				'</div>';
+		}
 	}
+
 
 	// Create custom popup content
 	var popupContent = '<div id="' + feature.properties.id + '" class="popup">' +
