@@ -49,16 +49,12 @@
     "marker-symbol": "star-stroked",
     "images": [
       [
-        "<img src='images/5336261475_bdc5953fe4_q.jpg' />",
-        "Berlin 1946- Victory Column (Berlin Siegessäule) by mocr. The Victory Column was built to commemorate the Prussian victory in the Danish-Prussian war. In 1920 it stood in Königsplatz, directly across from the Reichstag."
-      ],
-      [
         "<iframe width='180'  src='http://www.youtube.com/embed/H4wnh2osfGI' frameborder='0' allowfullscreen></iframe>",
         "Siegessäule, Berlin. Each of the three original columns represents a victory over the Danish, a victory over the Austrians, and a victory over the French."
       ],
       [
-        "<img src='images/14267454553_2f9a8e568e_q.jpg' />",
-        "Untitled by Trevor Warry. In 1938, it was relocated by the Nazis to a larger intersection called the Großer Stern. Today, it is a large tourist attraction. In 1920, it served as a reminder to Germany during World War I of their past victories."
+      "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanzler21a.jpg/320px-Kanzler21a.jpg' />",
+      "This is a picture of the new chancellary.",
       ]
     ]
   },
