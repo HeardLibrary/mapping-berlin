@@ -10,8 +10,6 @@
 
 * Plug your decimal coodinates into [Google Maps](https://www.google.com/maps/place/52%C2%B030'13.0%22N+13%C2%B019'53.4%22E/@52.5036106,13.3315,15z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0), remembering to separate them with a comma.
 
-* Open ```map.geojson``` in the \scripts folder of your local copy of EUS0991.01 in the [Atom](https://atom.io/) editor.
-
 * Copy a "feature" from the existing GeoJson. For example,
     ```json
     {
