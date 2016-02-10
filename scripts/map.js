@@ -136,5 +136,5 @@ function processLayer(result) {
 	};
 	var new_layer = L.mapbox.tileLayer(new_id);
 	new_layer.addTo(map);
-	map.featureLayer.setGeoJSON(result);
+	layer.setGeoJSON(result);
 }
