@@ -130,8 +130,6 @@ function getPoint(callback, cloudantID) {
 	var cloudantURLcallback = "?callback=?";
 	var thisCloudantURL = cloudantURLbase + cloudantID + cloudantURLcallback;
 	$.getJSON(thisCloudantURL, function(result) {
-		var message = JSON.stringify(result);
-		alert(message);
 		var geoJSON = [];
 		geoJSON["locations"] = geoJSON.push(result);
 		callback(geoJSON);
