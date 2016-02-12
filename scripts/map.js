@@ -103,6 +103,12 @@ $(function() {
 	});
 });
 
+$("#search").submit(function(event) {
+	event.preventDefault();
+	var searchText = $("#searchText").val();
+	getPoint(processLayer, searchText);
+});
+
 function getLayer(callback, cloudantView) {
 	var cloudantURLbase =
 		"https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour/_view/";
@@ -114,6 +120,20 @@ function getLayer(callback, cloudantView) {
 		for (var i in points) {
 			geoJSON["locations"] = geoJSON.push(points[i].value);
 		}
+		callback(geoJSON);
+	});
+}
+
+function getPoint(callback, cloudantID) {
+	var cloudantURLbase =
+		"https://vulibrarygis.cloudant.com/mapping-berlin/";
+	var cloudantURLcallback = "?callback=?";
+	var thisCloudantURL = cloudantURLbase + cloudantID + cloudantURLcallback;
+	$.getJSON(thisCloudantURL, function(result) {
+		var message = JSON.stringify(result);
+		alert(message);
+		var geoJSON = [];
+		geoJSON["locations"] = geoJSON.push(result);
 		callback(geoJSON);
 	});
 }
