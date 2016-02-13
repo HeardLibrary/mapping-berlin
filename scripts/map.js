@@ -27,7 +27,6 @@ layer.on('layeradd', function(e) {
 		}
 	}
 
-
 	// Create custom popup content
 	var popupContent = '<div id="' + feature.properties.id + '" class="popup">' +
 		'<h2>' + feature.properties.title + '</h2>' +
@@ -103,6 +102,12 @@ $(function() {
 	});
 });
 
+$("#search").submit(function(event) {
+	event.preventDefault();
+	var searchText = $("#searchText").val();
+	searchPoints(getPoints, searchText);
+});
+
 function getLayer(callback, cloudantView) {
 	var cloudantURLbase =
 		"https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour/_view/";
@@ -115,6 +120,50 @@ function getLayer(callback, cloudantView) {
 			geoJSON["locations"] = geoJSON.push(points[i].value);
 		}
 		callback(geoJSON);
+	});
+}
+// See http://stackoverflow.com/questions/19916894/wait-for-multiple-getjson-calls-to-finish
+function searchPoints(callback, cloudantSearch) {
+	var cloudantURLbase =
+		"https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour/_search/ids?q=";
+	var cloudantURLcallback = "&callback=?";
+	var thisCloudantURL = cloudantURLbase + cloudantSearch + cloudantURLcallback;
+	$.getJSON(thisCloudantURL, function(result) {
+		var ids = [];
+		var rows = result.rows;
+		callback(rows);
+	});
+}
+
+function getPoints(cloudantIDs) {
+	var geoJSON = [];
+	if (typeof cloudantIDs !== "undefined") {
+		for (var i in cloudantIDs) {
+			geoJSON.push(getPoint(cloudantIDs[i].id));
+		}
+	}
+
+	function getPoint(id) {
+		var cloudantURLbase = "https://vulibrarygis.cloudant.com/mapping-berlin/";
+		var url = cloudantURLbase + id;
+		return $.getJSON(url); // this returns a "promise"
+	}
+
+	$.when.apply($, geoJSON).done(function() {
+		// This callback will be called with multiple arguments,
+		// one for each AJAX call
+		// Each argument is an array with the following structure: [data, statusText, jqXHR]
+		var geoJSON = [];
+		// If a single object comes back, it will be as an object not an array of objects.
+		if (Array.isArray(arguments[0])) {
+			for (var i in arguments) {
+				geoJSON.push(arguments[i][0]);
+			}
+			processLayer(geoJSON);
+		} else if (typeof arguments[0] !== 'undefined') {
+			geoJSON.push(arguments[0]);
+			processLayer(geoJSON);
+		}
 	});
 }
 
