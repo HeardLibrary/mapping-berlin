@@ -106,7 +106,7 @@ $(function() {
 $("#search").submit(function(event) {
 	event.preventDefault();
 	var searchText = $("#searchText").val();
-	getPoint(processLayer, searchText);
+	searchPoints(getPoints, searchText);
 });
 
 function getLayer(callback, cloudantView) {
@@ -123,16 +123,42 @@ function getLayer(callback, cloudantView) {
 		callback(geoJSON);
 	});
 }
-
-function getPoint(callback, cloudantID) {
+// See http://stackoverflow.com/questions/19916894/wait-for-multiple-getjson-calls-to-finish 
+function searchPoints(callback, cloudantSearch) {
 	var cloudantURLbase =
-		"https://vulibrarygis.cloudant.com/mapping-berlin/";
-	var cloudantURLcallback = "?callback=?";
-	var thisCloudantURL = cloudantURLbase + cloudantID + cloudantURLcallback;
+		"https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour/_search/ids?q=";
+	var cloudantURLcallback = "&callback=?";
+	var thisCloudantURL = cloudantURLbase + cloudantSearch + cloudantURLcallback;
 	$.getJSON(thisCloudantURL, function(result) {
-		var geoJSON = [];
-		geoJSON["locations"] = geoJSON.push(result);
-		callback(geoJSON);
+		var ids = [];
+		var rows = result.rows;
+		callback(rows);
+	});
+}
+
+function getPoints(cloudantIDs) {
+	var geoJSON = [];
+	for (i = 0; i < cloudantIDs.length; i++) {
+		geoJSON.push(getPoint(cloudantIDs[i].id));
+	}
+
+	function getPoint(id) {
+		var cloudantURLbase = "https://vulibrarygis.cloudant.com/mapping-berlin/";
+		var url = cloudantURLbase + id;
+		return $.getJSON(url); // this returns a "promise"
+	}
+
+	$.when.apply($, geoJSON).done(function() {
+		// This callback will be called with multiple arguments,
+		// one for each AJAX call
+		// Each argument is an array with the following structure: [data, statusText, jqXHR]
+
+		// Let's map the arguments into an object, for ease of use
+		var obj = [];
+		for (var i = 0, len = arguments.length; i < len; i++) {
+			obj.push(arguments[i][0]);
+		}
+		processLayer(obj)
 	});
 }
 
