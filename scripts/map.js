@@ -154,10 +154,19 @@ function getPoints(cloudantIDs) {
 		// one for each AJAX call
 		// Each argument is an array with the following structure: [data, statusText, jqXHR]
 		var geoJSON = [];
-		for (var i in arguments) {
-			geoJSON.push(arguments[i][0]);
+		alert(JSON.stringify(arguments[0]));
+		// If a single object comes back, it will be as an object not an array of objects.
+		if (Array.isArray(arguments[0])) {
+			for (var i in arguments) {
+				geoJSON.push(arguments[i][0]);
+			}
+			processLayer(geoJSON);
+		} else if (typeof arguments[0] !== 'undefined') {
+			geoJSON.push(arguments[0]);
+			processLayer(geoJSON);
 		}
-		processLayer(geoJSON)
+
+
 	});
 }
 
