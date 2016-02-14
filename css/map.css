@@ -3,31 +3,6 @@
 /* Prevents the top nav from obscuring map controls */
 body { padding-top: 50px; }
 
-.navbar {
-    margin-bottom: 0px;
-}
-
-/* navbar */
-.navbar-default {
-    background-color: #FFCC00;
-    border-bottom: 3px solid;
-}
-
-.navbar-brand {
-  color: #8B0000 !important;
-}
-
-@media (min-width: 768px) {
-    .navbar-nav.navbar-right:last-child {
-        margin-right: 0px;
-    }
-}
-
-.caption {
-  font-size: 12px;
-  line-height: 15px;
-}
-
 /* Map Div */
 
 #map {

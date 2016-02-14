@@ -1,0 +1,35 @@
+/* navbar */
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-default {
+    background-color: #FFCC00;
+    border-bottom: 3px solid;
+}
+
+.navbar-brand {
+  color: #8B0000 !important;
+  font-family: UnifrakturCook;
+  font-size: 24px; 
+}
+
+#logo {
+  padding-left: 8px;
+  padding-top: 3px;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav.navbar-right:last-child {
+        margin-right: 0px;
+    }
+}
+
+.caption {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+#github {
+  padding-top: 8px;
+}
