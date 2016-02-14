@@ -1,7 +1,20 @@
 /* Custom Styles */
 
+/* Prevents the top nav from obscuring map controls */
+body { padding-top: 100px; }
+
 .navbar {
     margin-bottom: 0px;
+}
+
+/* navbar */
+.navbar-default {
+    background-color: #FFCC00;
+    border-bottom: 3px solid;
+}
+
+.navbar-brand {
+  color: #8B0000 !important;
 }
 
 @media (min-width: 768px) {
