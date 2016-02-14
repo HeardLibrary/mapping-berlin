@@ -1,7 +1,7 @@
 /* Custom Styles */
 
 /* Prevents the top nav from obscuring map controls */
-body { padding-top: 100px; }
+body { padding-top: 50px; }
 
 .navbar {
     margin-bottom: 0px;
