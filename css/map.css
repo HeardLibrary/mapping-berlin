@@ -1,13 +1,13 @@
 /* Custom Styles */
 
 /* Prevents the top nav from obscuring map controls */
-body { padding-top: 50px; }
+body { margin-top: 50px; }
 
 /* Map Div */
 
 #map {
   position:absolute;
-  height:100%;
+  height:93%;
   width:100%;
 }
 
