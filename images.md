@@ -11,32 +11,7 @@
 * Plug your decimal coodinates into [Google Maps](https://www.google.com/maps/place/52%C2%B030'13.0%22N+13%C2%B019'53.4%22E/@52.5036106,13.3315,15z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0), remembering to separate them with a comma.
 
 * Copy a "feature" from the existing GeoJson. For example,
-    ```json
-    {
-    "type": "Feature",
-    "properties": {
-      "title": "Brandenburg Gate",
-      "marker-size": "medium",
-      "marker-color": "#3366FF",
-      "marker-symbol": "star-stroked",
-      "images": [
-        ['<img src="images/Brandenburger_Tor_abends.jpg" />',
-          "The Brandenburg Gate."
-        ],
-        ['<img src="images/Brandenburger2.jpg" />',
-          "The Brandengurb Gate quadriga at night."
-        ]
-      ]
-    },
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        13.377674,
-        52.516224
-      ]
-    }
-  }
-  ```
+  
 * Edit the GeoJSON to reflect the information about your new point and image. Be sure to include official title and authorial credit in the description of the image. Plug in the URL for you image as shown below, as well as the decimal degrees for your coordinates.  You will also need to make sure that your format matches exactly what is shown below.  The quoations surround the ```<img src />``` tag must be double quotes, while interior quotaion marks must be single quotes.  For example,
 
  ```json
