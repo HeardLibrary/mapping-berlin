@@ -28,7 +28,9 @@
       [
         "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanzler21a.jpg/320px-Kanzler21a.jpg' />",
         "This is a picture of the new chancellary."
-      ]
+      ],
+      ["<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanzler21a.jpg/320px-Kanzler21a.jpg' />",
+        "This is the same picture again."]
     ]
   },
   "geometry": {
