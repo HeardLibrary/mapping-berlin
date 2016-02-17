@@ -9,32 +9,7 @@
 * Find the Latitude and Longitude of the video you want to use with [Google Maps](https://www.google.com/maps/place/St+Nicholas'+Church,+10178+Berlin,+Germany/@52.5168424,13.4074785,17z/data=!3m1!4b1!4m2!3m1!1s0x47a84e20c2c2a4a7:0x73bc4247163b5be8).  Make sure you are using decimal degrees.
 
 * Copy a "feature" from the existing GeoJson. For example,
-    ```json
-    {
-    "type": "Feature",
-    "properties": {
-      "title": "Brandenburg Gate",
-      "marker-size": "medium",
-      "marker-color": "#3366FF",
-      "marker-symbol": "star-stroked",
-      "images": [
-        ['<img src="images/Brandenburger_Tor_abends.jpg" />',
-          "The Brandenburg Gate."
-        ],
-        ['<img src="images/Brandenburger2.jpg" />',
-          "The Brandengurb Gate quadriga at night."
-        ]
-      ]
-    },
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        "13.377674",
-        "52.516224"
-      ]
-    }
-  }
-  ```
+    
 * Edit the GeoJSON to reflect the information about your new point and image. Be sure to include official title and authorial credit in the description of the image. For example,
 
  ```json
