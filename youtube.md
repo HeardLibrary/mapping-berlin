@@ -17,7 +17,7 @@
   "type": "Feature",
   "properties": {
     "title": "Berlin Victory Column",
-    "series": "Spring 2015",
+    "series": "Spring 2016",
     "tour": "1920",
     "marker-size": "medium",
     "marker-color": "#3366FF",
