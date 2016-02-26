@@ -18,12 +18,23 @@ layer.on('layeradd', function(e) {
 	if (typeof images !== "undefined") {
 		for (var i = 0; i < images.length; i++) {
 			var img = images[i];
-
 			slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') +
 				'">' +
-				img[0] +
-				'<div class="caption">' + img[1] + '</div>' +
+				formatMedia(img) +
+				'<div class="caption">' + img[0].description + '</div>' +
 				'</div>';
+		}
+	}
+
+	// Adds corresponding HTML element to format the media formats appropriately.
+	// The list of acceptable formats may be expanded as necessary.
+	function formatMedia(img) {
+		if (img[0].format === "YouTube") {
+			return "<iframe width='175' src='" + img[0].url +
+				"' frameborder='0' allowfullscreen=''></iframe>";
+		}
+		if (img[0].format === "Image") {
+			return "<img src='" + img[0].url + "'/>";
 		}
 	}
 
@@ -122,6 +133,7 @@ function getLayer(callback, cloudantView) {
 		callback(geoJSON);
 	});
 }
+
 // See http://stackoverflow.com/questions/19916894/wait-for-multiple-getjson-calls-to-finish
 function searchPoints(callback, cloudantSearch) {
 	var cloudantURLbase =
