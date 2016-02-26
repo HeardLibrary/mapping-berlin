@@ -18,17 +18,16 @@ layer.on('layeradd', function(e) {
 	if (typeof images !== "undefined") {
 		for (var i = 0; i < images.length; i++) {
 			var img = images[i];
-
 			slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') +
 				'">' +
-				formatMedia(img) + "test" +
+				formatMedia(img) +
 				'<div class="caption">' + img[0].description + '</div>' +
 				'</div>';
 		}
 	}
 
 	// Adds corresponding HTML element to format the media formats appropriately.
-	// The list of acceptable formats may be expanded as necessary. 
+	// The list of acceptable formats may be expanded as necessary.
 	function formatMedia(img) {
 		if (img[0].format === "YouTube") {
 			return "<iframe width='175' src='" + img[0].url +
@@ -114,6 +113,12 @@ $(function() {
 	});
 });
 
+$("#search").submit(function(event) {
+	event.preventDefault();
+	var searchText = $("#searchText").val();
+	searchPoints(getPoints, searchText);
+});
+
 function getLayer(callback, cloudantView) {
 	var cloudantURLbase =
 		"https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour/_view/";
@@ -126,6 +131,51 @@ function getLayer(callback, cloudantView) {
 			geoJSON["locations"] = geoJSON.push(points[i].value);
 		}
 		callback(geoJSON);
+	});
+}
+
+// See http://stackoverflow.com/questions/19916894/wait-for-multiple-getjson-calls-to-finish
+function searchPoints(callback, cloudantSearch) {
+	var cloudantURLbase =
+		"https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour/_search/ids?q=";
+	var cloudantURLcallback = "&callback=?";
+	var thisCloudantURL = cloudantURLbase + cloudantSearch + cloudantURLcallback;
+	$.getJSON(thisCloudantURL, function(result) {
+		var ids = [];
+		var rows = result.rows;
+		callback(rows);
+	});
+}
+
+function getPoints(cloudantIDs) {
+	var geoJSON = [];
+	if (typeof cloudantIDs !== "undefined") {
+		for (var i in cloudantIDs) {
+			geoJSON.push(getPoint(cloudantIDs[i].id));
+		}
+	}
+
+	function getPoint(id) {
+		var cloudantURLbase = "https://vulibrarygis.cloudant.com/mapping-berlin/";
+		var url = cloudantURLbase + id;
+		return $.getJSON(url); // this returns a "promise"
+	}
+
+	$.when.apply($, geoJSON).done(function() {
+		// This callback will be called with multiple arguments,
+		// one for each AJAX call
+		// Each argument is an array with the following structure: [data, statusText, jqXHR]
+		var geoJSON = [];
+		// If a single object comes back, it will be as an object not an array of objects.
+		if (Array.isArray(arguments[0])) {
+			for (var i in arguments) {
+				geoJSON.push(arguments[i][0]);
+			}
+			processLayer(geoJSON);
+		} else if (typeof arguments[0] !== 'undefined') {
+			geoJSON.push(arguments[0]);
+			processLayer(geoJSON);
+		}
 	});
 }
 
