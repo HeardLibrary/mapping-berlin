@@ -21,7 +21,7 @@ layer.on('layeradd', function(e) {
 			slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') +
 				'">' +
 				formatMedia(img) +
-				'<div class="caption">' + img[0].description + '</div>' +
+				'<div class="caption">' + img.description + '</div>' +
 				'</div>';
 		}
 	}
