@@ -18,12 +18,23 @@ layer.on('layeradd', function(e) {
 	if (typeof images !== "undefined") {
 		for (var i = 0; i < images.length; i++) {
 			var img = images[i];
-
 			slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') +
 				'">' +
-				img[0] +
-				'<div class="caption">' + img[1] + '</div>' +
+				formatMedia(img) +
+				'<div class="caption">' + img.description + '</div>' +
 				'</div>';
+		}
+	}
+
+	// Adds corresponding HTML element to format the media formats appropriately.
+	// The list of acceptable formats may be expanded as necessary.
+	function formatMedia(img) {
+		if (img.format === "YouTube") {
+			return "<iframe width='175' src='" + img.url +
+				"' frameborder='0' allowfullscreen=''></iframe>";
+		}
+		if (img.format === "Image") {
+			return "<img src='" + img.url + "'/>";
 		}
 	}
 
@@ -77,7 +88,7 @@ $(function() {
 
 	// list views from Cloudant that we want to offer as layers
 	var cloudantViews = [];
-	$.getJSON('https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour/',
+	$.getJSON('https://vulibrarygis.cloudant.com/map-berlin/_design/tour/',
 		function(result) {
 			var viewsList = result.views;
 			for (var v in viewsList) {
@@ -110,7 +121,7 @@ $("#search").submit(function(event) {
 
 function getLayer(callback, cloudantView) {
 	var cloudantURLbase =
-		"https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour/_view/";
+		"https://vulibrarygis.cloudant.com/map-berlin/_design/tour/_view/";
 	var cloudantURLcallback = "?callback=?";
 	var thisCloudantURL = cloudantURLbase + cloudantView + cloudantURLcallback;
 	$.getJSON(thisCloudantURL, function(result) {
@@ -122,10 +133,11 @@ function getLayer(callback, cloudantView) {
 		callback(geoJSON);
 	});
 }
+
 // See http://stackoverflow.com/questions/19916894/wait-for-multiple-getjson-calls-to-finish
 function searchPoints(callback, cloudantSearch) {
 	var cloudantURLbase =
-		"https://vulibrarygis.cloudant.com/mapping-berlin/_design/tour/_search/ids?q=";
+		"https://vulibrarygis.cloudant.com/map-berlin/_design/tour/_search/ids?q=";
 	var cloudantURLcallback = "&callback=?";
 	var thisCloudantURL = cloudantURLbase + cloudantSearch + cloudantURLcallback;
 	$.getJSON(thisCloudantURL, function(result) {
@@ -144,7 +156,7 @@ function getPoints(cloudantIDs) {
 	}
 
 	function getPoint(id) {
-		var cloudantURLbase = "https://vulibrarygis.cloudant.com/mapping-berlin/";
+		var cloudantURLbase = "https://vulibrarygis.cloudant.com/map-berlin/";
 		var url = cloudantURLbase + id;
 		return $.getJSON(url); // this returns a "promise"
 	}
