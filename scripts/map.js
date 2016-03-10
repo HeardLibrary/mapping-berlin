@@ -29,12 +29,12 @@ layer.on('layeradd', function(e) {
 	// Adds corresponding HTML element to format the media formats appropriately.
 	// The list of acceptable formats may be expanded as necessary.
 	function formatMedia(img) {
-		if (img[0].format === "YouTube") {
-			return "<iframe width='175' src='" + img[0].url +
+		if (img.format === "YouTube") {
+			return "<iframe width='175' src='" + img.url +
 				"' frameborder='0' allowfullscreen=''></iframe>";
 		}
-		if (img[0].format === "Image") {
-			return "<img src='" + img[0].url + "'/>";
+		if (img.format === "Image") {
+			return "<img src='" + img.url + "'/>";
 		}
 	}
 
