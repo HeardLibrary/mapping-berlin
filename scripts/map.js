@@ -110,12 +110,14 @@ $(function() {
 			var thisCloudantView = selection_value;
 			getLayer(processLayer, thisCloudantView);
 		}
+		$("#searchText").val(""); // empty the searchbox when choosing a layer
 	});
 });
 
 $("#search").submit(function(event) {
 	event.preventDefault();
 	var searchText = $("#searchText").val();
+	$('#layers-dropdown').val("default"); // reset the dropdown to default value
 	searchPoints(getPoints, searchText);
 });
 
@@ -143,7 +145,11 @@ function searchPoints(callback, cloudantSearch) {
 	$.getJSON(thisCloudantURL, function(result) {
 		var ids = [];
 		var rows = result.rows;
+		if (rows.length > 0) {
 		callback(rows);
+		} else {
+			showAlert('alert-noresults');
+		}
 	});
 }
 
@@ -198,4 +204,16 @@ function processLayer(result) {
 	var new_layer = L.mapbox.tileLayer(new_id);
 	new_layer.addTo(map);
 	layer.setGeoJSON(result);
+}
+
+// Show and hide the alert box
+function showAlert(alert_id){
+  $("#"+alert_id).css({"display": "block"}).addClass("in");
+  window.setTimeout(function () {
+     hideAlert(alert_id);
+  }, 4000);
+}
+
+function hideAlert(alert_id){
+  $("#"+alert_id).removeClass("in").css({"display": "none"});
 }

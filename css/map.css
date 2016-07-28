@@ -47,7 +47,7 @@ body { margin-top: 50px; }
 
 /* Alert message */
 
-#alert-vucampus, #alert-browser {
+#alert-vucampus, #alert-browser, #alert-noresults {
   display:none;
   margin-bottom:0px;
 }
