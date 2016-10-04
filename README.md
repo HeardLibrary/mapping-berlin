@@ -32,38 +32,34 @@ Set up an account at [Mapbox](https://www.mapbox.com) and then create a [new pro
 
 ```JSON
 {
+  "_id": "619fce05d00e5c4797e3fbb4f1f846f5",
+  "_rev": "1-8e204833b3cfbfc7903971498c9d913e",
   "type": "Feature",
   "properties": {
-    "title": "Mayborn",
-    "series": "Building",
-    "tour": "Historic",
+    "title": "Checkpoint Bravo",
+    "series": "Spring 2016",
+    "tour": "1970",
     "marker-size": "medium",
-    "marker-color": "#e5c278",
-    "marker-symbol": "star-stroked",
+    "marker-color": "#DF013A",
+    "marker-symbol": "roadblock",
     "images": [
-      [
-        "<img src='images/pc.bld.iabe.001.jpg' />",
-        "In 1914, Mayborn was the first building built on the new Hillsboro campus. "
-      ],
-      [
-        "<img src='images/pc.bld.iabi.003.jpg' />",
-        "This is a photo of Mayborn."
-      ],
-      [
-        "<img src='images/pc.bld.iabe.001.jpg' />",
-        "It was originally tasked for the instruction of Industrial Arts. "
-      ],
-      [
-        "<img src='images/pc.cas.smok.005.jpg' />",
-        "It was renamed in 1978 after Peabody trustee Frank W. Mayborn. "
-      ]
+      {
+        "format": "Image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Checkpoint_Bravo_Br%C3%BCckenhaus.jpg",
+        "description": "Checkpoint Bravo Brückenhaus by Jochen Teufel. Checkpoint Bravo was, although less famous than Checkpoint Charlie, one of the most important and busy checkpoints from East and West Germany."
+      },
+      {
+        "format": "Image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Berliner_Mauer_1987_00010033.jpg",
+        "description": "Berliner Mauer 1987 by Jochims. After the reunitification process, the checkpoint fell into dispair. Eventually, it was transformed into Europarc Dreilinden, a park. However, the old guard tower still remains standing as a symbol of the checkpoint."
+      }
     ]
   },
   "geometry": {
     "type": "Point",
     "coordinates": [
-      -86.797808,
-      36.142611
+      13.1800957,
+      52.409029
     ]
   }
 }
