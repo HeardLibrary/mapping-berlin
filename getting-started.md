@@ -1,12 +1,12 @@
-##Getting Started
+## Getting Started
 
-###What is Free and Open Source Software?
+### What is Free and Open Source Software?
 
-###Application Architecture
+### Application Architecture
 
-###Understanding [JSON](http://www.json.org/)
+### Understanding [JSON](http://www.json.org/)
 
-###Exploring [GeoJSON](http://geojson.org/)
+### Exploring [GeoJSON](http://geojson.org/)
 
 ```json
 {
@@ -29,13 +29,13 @@
 }
 ```
 
-###Installing [Atom](https://atom.io/)
+### Installing [Atom](https://atom.io/)
 
 * Installing [linter-jsonlinter](https://github.com/AtomLinter/linter-jsonlint)
 * Installing [atom-jsonpp](https://github.com/swenson/atom-jsonpp)
 
-###Using a [GeoJSON linter](http://geojsonlint.com/)
+### Using a [GeoJSON linter](http://geojsonlint.com/)
 
-###Setting up a [Github Account](https://github.com/)
+### Setting up a [Github Account](https://github.com/)
 
-###Forking a [Gist](https://gist.github.com/CliffordAnderson/8c9e338f274b109594ca)
+### Forking a [Gist](https://gist.github.com/CliffordAnderson/8c9e338f274b109594ca)

@@ -1,4 +1,4 @@
-##Instructions for finding a photograph for your map
+## Instructions for finding a photograph for your map
 
 * Find a photograph of Berlin in [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page) or any other source with [EXIF](https://en.wikipedia.org/wiki/Exchangeable_image_file_format) data and a [Creative Commons](http://creativecommons.org/) license. For example, [The Berlin Chancellary](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanzler21a.jpg/320px-Kanzler21a.jpg) by Madden.
 
