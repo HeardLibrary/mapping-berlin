@@ -1,4 +1,4 @@
-##Let's Map!
+## Let's Map!
 
 By now, you should have reached a point where you are comfortable with writing and editing GeoJSON.  Before we can add them to the map, we need to make sure that we include information to help make our points searchable.  You will accomplish this by adding a key and value to you GeoJSON that helps us identify them as your new points.  To do this, will add a key called "series" and a value of "Spring 2016".  You will also add a key called "tour" and a value of "Test".  Eventually, the value for "tour" will be replaced by your map year, but do not worry about this for now.  
 

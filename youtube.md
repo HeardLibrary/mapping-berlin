@@ -1,4 +1,4 @@
-##Instructions for finding a youtube video for your map
+## Instructions for finding a youtube video for your map
 
 * Find a video of Berlin in [youTube](https://www.youtube.com/) or any other source with a [Creative Commons](http://creativecommons.org/) license. For example, [St. Nicholas' Church, Berlin, Germany](https://www.youtube.com/watch?v=uKlPfgi8xHw) by Igor Skoglund.
 
