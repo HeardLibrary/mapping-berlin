@@ -1,4 +1,4 @@
-# Mapping Berling
+# Mapping Berlin
 
 The goal of this project is to create a light-weight, mobile ready map of points-of-interest in Berlin using open source technologies. 
 
