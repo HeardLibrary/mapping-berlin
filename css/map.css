@@ -14,6 +14,10 @@ body { margin-top: 50px; }
 /* MapBox Popup Marker Styling */
 /* Adapted from https://www.mapbox.com/mapbox.js/example/v1.0.0/markers-with-image-slideshow/ */
 
+.mapboxgl-popup-content {
+  width: 200px;
+}
+
 .popup {
     text-align: center;
 }
@@ -58,4 +62,12 @@ body { margin-top: 50px; }
   right: 25px;
   top: 10px;
   z-index: 1;
+}
+
+#point-options {
+  float: right;
+  position: relative;
+  right: 35px;
+  top: 10px;
+  z-index: 2;
 }

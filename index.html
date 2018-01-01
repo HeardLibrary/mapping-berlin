@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset=utf-8 />
-  <title>Mapping Berlin</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-  <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <script src="https://use.edgefonts.net/unifrakturcook:n7:all.js"></script>
-  <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
-  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/map.css" rel='stylesheet' />
-  <link href="css/site.css" rel='stylesheet' />
-</head>
+  <head>
+    <title>Mapping Berling</title>
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="//api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://use.edgefonts.net/unifrakturcook:n7:all.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="//api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.css" rel="stylesheet" />
+    <link href="css/map.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+  </head>
 
-<body>
-  <div class="navbar navbar-default navbar-fixed-top">
-    <div class="navbar-header">
-      <a href="#" class="pull-left"><img id="logo" src="css/logo.png"></a>
-      <a href="index.html" class="navbar-brand">Berlin in the 20th Century</a>
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <a href="#" class="pull-left"><img id="logo" src="css/logo.png" /></a>
+        <a href="index.html" class="navbar-brand">Berlin in the 20th Century</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse"
+          data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse navbar-right" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="http://as.vanderbilt.edu/europeanstudies/">Max Kade Center</a>
+          </li>
+          <li>
+            <form class="navbar-form" role="search" id="search">
+              <div class="form-group">
+                <input type="text" class="form-control" id="searchText" placeholder="Search" />
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+      <!-- /input-group -->
     </div>
-    <div class="navbar-collapse collapse navbar-right" id="navbar-main">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <a href="http://as.vanderbilt.edu/europeanstudies/">Max Kade Center</a>
-        </li>
-        <li>
-          <form class="navbar-form" role="search" id="search">
-            <div class="form-group">
-              <input type="text" class="form-control" id="searchText" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-        </li>
-      </ul>
+    <!-- /row -->
+    <div id="layer-options">
+      <select id="layers-dropdown">
+        <option value="default">Select a Map:</option>
+      </select>
     </div>
-    <!-- /input-group -->
-  </div>
-  <!-- /row -->
-
-  <div id="layer-options">
-    <select id="layers-dropdown">
-      <option value="default">Select a Map:</option>
-    </select>
-  </div>
-
-  <div id="alert-noresults" class="alert alert-warning">
-    <span class="glyphicon glyphicon-exclamation-sign"></span>
-    No points found matching your search.
-  </div>
-
-  <div id="map"></div>
-  <script src="scripts/map.js"></script>
-</body>
+    <div id="point-options">
+      <select id="points-dropdown">
+        <option value="default">Select Points:</option>
+      </select>
+    </div>
+    <div id="alert-noresults" class="alert alert-warning">
+      <span class="glyphicon glyphicon-exclamation-sign"></span> No points found matching your
+      search. </div>
+    <div id="map"></div>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/map.js"></script>
+  </body>
 </html>
