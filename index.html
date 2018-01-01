@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Mapping Berling</title>
+    <title>Mapping Berlin</title>
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <script src="//api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.js"></script>
@@ -49,14 +49,19 @@
       <!-- /input-group -->
     </div>
     <!-- /row -->
+    <!-- See https://www.mapbox.com/mapbox-gl-js/example/adjust-layer-opacity/ -->
+    <div class='slider'>
+        <label>Transparency: <span id='slider-value'>100%</span></label>
+        <input id='slider' type='range' min='0' max='100' step='0' value='100' />
+    </div>
     <div id="layer-options">
       <select id="layers-dropdown">
-        <option value="default">Select a Map:</option>
+        <option value="default">Select Map:</option>
       </select>
     </div>
     <div id="point-options">
       <select id="points-dropdown">
-        <option value="default">Select Points:</option>
+        <option value="default">Select Era:</option>
       </select>
     </div>
     <div id="alert-noresults" class="alert alert-warning">

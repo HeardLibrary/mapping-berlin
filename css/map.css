@@ -71,3 +71,11 @@ body { margin-top: 50px; }
   top: 10px;
   z-index: 2;
 }
+
+.slider {
+    float: right;
+    position: relative;
+    right: 5px;
+    top: 10px;
+    z-index: 3;
+}

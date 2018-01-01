@@ -9,6 +9,11 @@ var map = new mapboxgl.Map({
   zoom: config.initialZoom
 });
 
+// See https://www.mapbox.com/mapbox-gl-js/example/adjust-layer-opacity/
+var slider = document.getElementById('slider');
+var sliderValue = document.getElementById('slider-value');
+
+
 map.on('load', function() {
   map.addSource("points", {
     "type": "geojson",
@@ -292,6 +297,14 @@ function processLayer(result) {
         'none');
     }
     map.setLayoutProperty(selection_label, 'visibility', 'visible');
+    // See https://www.mapbox.com/mapbox-gl-js/example/adjust-layer-opacity/
+    slider.addEventListener('input', function(e) {
+      // Adjust the layers opacity.
+      map.setPaintProperty(selection_label, 'raster-opacity', parseInt(e.target
+        .value, 10) / 100);
+      // Value indicator
+      sliderValue.textContent = e.target.value + '%';
+    });
   } else new_id = config.initialStyle;
 }
 
