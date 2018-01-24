@@ -1,8 +1,9 @@
-## Getting Started
+# Getting Started with JSON and GeoJSON
 
-### What is Free and Open Source Software?
+###Installing [Atom](https://atom.io/)
 
-### Application Architecture
+* Installing [linter-jsonlinter](https://github.com/AtomLinter/linter-jsonlint)
+* Installing [atom-jsonpp](https://github.com/swenson/atom-jsonpp)
 
 ### Understanding [JSON](http://www.json.org/)
 
@@ -29,13 +30,6 @@
 }
 ```
 
-### Installing [Atom](https://atom.io/)
-
-* Installing [linter-jsonlinter](https://github.com/AtomLinter/linter-jsonlint)
-* Installing [atom-jsonpp](https://github.com/swenson/atom-jsonpp)
-
 ### Using a [GeoJSON linter](http://geojsonlint.com/)
-
-### Setting up a [Github Account](https://github.com/)
 
 ### Forking a [Gist](https://gist.github.com/CliffordAnderson/8c9e338f274b109594ca)
