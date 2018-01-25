@@ -3,8 +3,8 @@
 ## Learning Outcomes
 
 * Gain facility with the Atom Editor and learn how to use its [package manager](https://flight-manual.atom.io/using-atom/sections/atom-packages/), APM, to install [packages](https://atom.io/packages);
-* Identify the components of the JSON data standard and apply them practically; 
-* Enocde and validate geospatial information with GeoJSON.
+* Identify the components of the JSON data standard and apply them practically;
+* Encode and validate geospatial information with GeoJSON.
 
 ## Installing [Atom](https://atom.io/)
 
