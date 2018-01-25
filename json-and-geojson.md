@@ -31,7 +31,7 @@ But, because JSON objects and arrays can be nested, JSON can also grow [complex]
 
 ### Exercise
 
-* Markup up this [list of Berlin U-Bahn stations] as JSON
+* Mark up this [list of Berlin U-Bahn stations](https://en.wikipedia.org/wiki/List_of_Berlin_U-Bahn_stations) as JSON
 
 ## Exploring [GeoJSON](http://geojson.org/)
 
