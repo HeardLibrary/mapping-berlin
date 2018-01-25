@@ -81,7 +81,7 @@ Since GeoJSON allows us to add arbitrary key-value pairs to our properties, we a
 ### GeoJSON tools
 
 * Using a [GeoJSON linter](http://geojsonlint.com/)
-* [geojson.ip] is a great tool for converting data to GeoJSON, displaying it on a map, editing it, and sharing it with others.
+* [geojson.io](http://geojson.io/) is a great tool for converting data to GeoJSON, displaying it on a map, editing it, and sharing it with others.
 * You can also display GeoJSON data with a Github [Gist](https://gist.github.com/CliffordAnderson/8c9e338f274b109594ca)
 
 ### Exercises
