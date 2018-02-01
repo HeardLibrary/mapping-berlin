@@ -1,6 +1,7 @@
 # Mapping Berlin
 
-The goal of this project is to create a light-weight, mobile ready map of points-of-interest in Berlin using open source technologies. 
+The goal of this project is to create a light-weight, mobile ready map of points-of-interest in Berlin using open source technologies.
+Okay, well, at least I've finally found the same file as I was looking at while in GitHub for Desktop!  With any luck, this will work. 
 
 ## Technologies
 
@@ -16,7 +17,7 @@ All code contributed by the staff members of the Jean and Alexander Heard Librar
 
 ## Installation Instructions
 
-This project runs with any web server; it does not require the use of  server-side technologies (like PHP, NodeJS, etc.). The project deploys HTML and Javascript files via HTTP to the client's device. The client then requests a base map using JSONP from Mapbox and requests the points to display (again using JSONP) from Cloudant. 
+This project runs with any web server; it does not require the use of  server-side technologies (like PHP, NodeJS, etc.). The project deploys HTML and Javascript files via HTTP to the client's device. The client then requests a base map using JSONP from Mapbox and requests the points to display (again using JSONP) from Cloudant.
 
 ![Project Architecture](http://i.imgur.com/zTF3ZiS.png?1)
 
@@ -73,7 +74,7 @@ IBM [Cloudant](https://cloudant.com/) is a hosted version of [CouchDB](http://co
 
 #### Set Up
 
-Setting up Cloudant requires entering GeoJSON documents and design documents called "views." 
+Setting up Cloudant requires entering GeoJSON documents and design documents called "views."
 
 #### Adding Points
 
@@ -91,9 +92,9 @@ Add your GeoJSON data within this document, making sure to preserve the "_id" ke
 
 Setting up design documetns is also straightforward. Click on the gear symbol, then select "New View." You'll be prompted to enter a name for your design document. We recommend "_design/tour" though you can *mutatis mutandis* use any name you'd like. After selecting a name for your design document, select a name for your view–for example, "Tree" to select all the documents about trees. Finally, you'll need to write a map function.
 
-**N.B.** Mapping in this context does not have anything to do with GIS; it refers to a function that is applied to all items in some sort of array. 
+**N.B.** Mapping in this context does not have anything to do with GIS; it refers to a function that is applied to all items in some sort of array.
 
-We've written a simple map function in Cloudant to view the documents about trees. 
+We've written a simple map function in Cloudant to view the documents about trees.
 
 ![Map Function in Cloudant](http://i.imgur.com/qIFmrsP.png)
 
@@ -106,4 +107,3 @@ You don't need to write a reduce function in this case; you should leave that se
 ### Bootstrap
 
 [Bootstrap](http://getbootstrap.com/) is an open source web framework designed for mobile clients. This project uses Bootstrap for its web design. The project relieves on content delivery networks (CDN) for the bootstrap files. You may customize the HTML and the CSS by overriding and adding local files.
-
