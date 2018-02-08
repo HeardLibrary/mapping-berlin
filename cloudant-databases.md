@@ -19,8 +19,6 @@ The GeoJSON data for this exercise is available [here](https://gist.github.com/C
 * Grant writer permissions to your new key
 * Create Postman operations to interact with your database
 
-```
-
 ### Bulk Docs
 
 It is also possible to upload multiple JSON documents at once using the `/_bulk_docs` interface. Try uploading the [entire dataset](https://gist.github.com/CliffordAnderson/17bfe445f35cbf5161c660ef4e87b151) at once. Be sure to send an array of GeoJSON objects, not a single FeatureCollection.
